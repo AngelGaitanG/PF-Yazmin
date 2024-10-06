@@ -1,0 +1,55 @@
+@import '../../../../styles.scss';
+
+header {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 1300px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0 40px;
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    color: $navbar-color;
+    font-weight: 700;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 10px black;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: $title-color;
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(0%);
+}
+
+ul li a:hover::after,
+ul li a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+ul li a:hover,
+ul li a.active {
+    color: $title-color;
+}
