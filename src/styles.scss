@@ -12,9 +12,19 @@ $emphasis-font: "Playfair Display", serif;
 $blog-font: "Amatic SC", sans-serif;
 
 $navbar-color: #F5F3E5;
-$title-color: #FFEBA1;
+$title-color: #ffde69;
 
-
+::-webkit-scrollbar {
+    width: 8px;
+    background: #EAD5B1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #032B44;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #E9E7D3;
+  }
 
 * {
   margin: 0;

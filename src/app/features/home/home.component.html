@@ -1,1 +1,32 @@
-<p>home works!</p>
+<section class="home">
+    <div class="welcome">
+        <div class="hero">
+            <img src="../../../assets/images/person-gray-photo-placeholder-woman-vector-23512344.jpg" alt="hero">
+        </div>
+        <div class="presentation">
+            <h1>Yazmin Villota - Blue Artist</h1>        
+        </div>
+        <div class="color-transition"></div>
+    </div>
+    <div class="bottom-container">
+
+        <div class="bottom">
+            <img src="../../../assets/images/decoration1.png" alt="decoration" class="decoration top-left" >
+            <img src="../../../assets/images/decoration1.png" alt="decoration" class="decoration top-right" >
+            <img src="../../../assets/images/decoration1.png" alt="decoration" class="decoration bottom-left" >
+            <img src="../../../assets/images/decoration1.png" alt="decoration" class="decoration bottom-right" >
+            <p class="description">
+                No tengo idea de que estoy haciendo aqui, tal vez deberia pintar algo o escribir una cancion de rock, pero no se... Me siento como si estuviera en un espejo retrovisor, viendo hacia atras y no hacia adelante. La vida es una gran aventura, pero a veces me siento perdido en el camino. Asi que si ves este parrafo y sabes que debo hacer, por favor, dime... Porque la verdad, no tengo ni idea.
+            </p>
+            <button class="idk-btn">Nose por ahora</button>
+            <div class="cards-container">
+                <div class="card" *ngFor="let card of cards">
+                    <button>{{card.button}}</button>
+                    <div class="card-image" routerLink="{{card.link}}">
+                        <img src="{{card.src}}" alt="{{card.alt}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
