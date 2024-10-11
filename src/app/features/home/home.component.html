@@ -6,7 +6,6 @@
         <div class="presentation">
             <h1>Yazmin Villota - Blue Artist</h1>        
         </div>
-        <div class="color-transition"></div>
     </div>
     <div class="bottom-container">
 
@@ -21,7 +20,7 @@
             <button class="idk-btn">Nose por ahora</button>
             <div class="cards-container">
                 <div class="card" *ngFor="let card of cards">
-                    <button>{{card.button}}</button>
+                    <button routerLink="{{card.link}}">{{card.button}}</button>
                     <div class="card-image" routerLink="{{card.link}}">
                         <img src="{{card.src}}" alt="{{card.alt}}">
                     </div>

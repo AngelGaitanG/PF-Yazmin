@@ -1,0 +1,271 @@
+@import '../../../styles.scss';
+
+.blog {
+    margin-top: 40px;
+    min-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(to top, #032b44d7 80%, transparent 99%);
+}
+
+.right-container {
+    text-align: center;
+    width: 70%;
+
+    .title {
+        font-family: $titles;  /* Great Vibes */
+        font-size: 72px;  /* Reducido para mejor legibilidad */
+        font-weight: normal;
+        color: #F9D58B;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 20px 0;
+        text-align: center;
+        letter-spacing: 1px;  /* Ajustado para mayor claridad */
+        text-transform: none;  /* Solo la primera letra en mayúscula */
+    }
+
+    .subtitle {
+        text-align: justify;
+        font-family: $body-font;  /* Cormorant Garamond */
+        font-size: 22px;  /* Ligero ajuste en el tamaño */
+        color: $navbar-color;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .destacated-posts {
+        border-top: solid 1px $navbar-color;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding-top: 20px;
+        width: 90%;
+        display: flex;
+        text-align: justify;
+        gap: 0 20%;
+
+        .post {
+            h3 {
+                font-family: $playfair-font;  /* Playfair Display */
+                font-size: 22px;  /* Un tamaño más estándar */
+                color: $navbar-color;
+                margin: 0 auto;
+            }
+
+            p {
+                font-family: $body-font;  /* Cormorant Garamond */
+                font-size: 18px;
+                color: $navbar-color;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .subtitle-blog {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        background: url(../../../assets/icons/underline2.png) no-repeat center;
+        background-size: contain;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 600;
+        font-family: $subtitles;  /* Dancing Script */
+        color: #F9D58B;
+    }
+
+    .blog-posts {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px 0;
+
+        .blog-card {
+            width: 45%;
+            
+            p {
+                font-family: $playfair-font;  /* Playfair Display */
+                font-size: 18px;
+                font-weight: normal;  /* Cambiado para mejor legibilidad */
+                color: $navbar-color;
+            }
+        }
+    }
+
+    .blogs-art {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+        .art-card {
+            width: 30%;
+            border-radius: 3px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .art-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 223, 80, 0.3);
+            cursor: pointer;
+        }
+    }
+}
+
+.left-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0;
+
+    padding: 20px;
+    .vertical-image {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+        border: 2px solid #F9D58B;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+    }
+
+    .vertical-text {
+                font-family: $playfair-font;  
+                font-size: 18px;
+                font-weight: normal; 
+                color: $navbar-color;
+    }
+}
+
+// Versión para tabletas y pantallas medianas (768px)
+@media screen and (max-width: 768px) {
+    .blog {
+        background: linear-gradient(to top, #032b44d7 97%, transparent 99%);
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  
+    .left-container,
+    .right-container {
+      width: 100%;
+    }
+  
+    .left-container .vertical-image {
+      height: 300px;
+    }
+  
+    .right-container .blog-posts {
+      flex-direction: column;
+      gap: 30px 0;
+      align-items: center;
+    }
+    
+    .right-container {
+        .blog-posts {
+            .blog-card {
+                width: 100%;
+            }
+        }
+    }
+    
+  
+    .right-container .blogs-art {
+      flex-direction: row;
+      gap: 20px 0;
+  
+    }
+  }
+  
+  // Versión para celulares (480px)
+  @media screen and (max-width: 480px) {
+    .right-container .title {
+      font-size: 48px;
+    }
+  
+    .right-container .subtitle {
+      font-size: 18px;
+    }
+  
+    .right-container .destacated-posts {
+      flex-direction: column;
+      gap: 20px 0;
+  
+      .post h3 {
+        font-size: 20px;
+      }
+  
+      .post p {
+        font-size: 16px;
+      }
+    }
+  
+    .right-container .subtitle-blog {
+      font-size: 20px;
+      height: 25px;
+    }
+  }
+  
+  // Versión para celulares pequeños (320px)
+  @media screen and (max-width: 320px) {
+    .blog {
+      padding: 0 10px;
+    }
+  
+    .right-container .title {
+      font-size: 36px;
+    }
+  
+    .right-container .subtitle {
+      font-size: 16px;
+      width: 100%;
+    }
+  
+    .right-container .destacated-posts {
+      gap: 15px 0;
+  
+      .post h3 {
+        font-size: 18px;
+      }
+  
+      .post p {
+        font-size: 14px;
+      }
+    }
+  
+    .right-container .blog-posts {
+      gap: 20px 0;
+      
+    }
+  
+    .left-container .vertical-image {
+      height: 250px;
+    }
+  
+    .right-container .blogs-art {
+      gap: 15px 0;
+  
+      .art-card {
+        width: 100%;
+      }
+    }
+  }
+  

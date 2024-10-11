@@ -54,3 +54,10 @@ ul li a:hover,
 ul li a.active {
     color: $title-color;
 }
+
+
+@media screen and (max-width: 410px) {
+    ul li a {
+        font-size: 1rem;
+    }
+}
