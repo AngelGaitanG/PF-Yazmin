@@ -1,0 +1,128 @@
+@import '../../../styles.scss';
+
+.gallery {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #032b44d7 92%, transparent 99%);
+    color: var(--yellow-100);
+    margin: 0;
+    margin-top: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+}
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+h1 {
+    font-family: $titles;
+    font-size: 5rem;
+    color: #F9D58B;
+}
+nav {
+    margin-bottom: 20px;
+}
+.btn {
+    background-color: transparent;
+    border: 1px solid var(--yellow-400);
+    color: var(--yellow-400);
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn:hover {
+    background-color: var(--yellow-400);
+    color: var(--deep-blue-900);
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.gallery-type {
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #EAD5B1, #E9E7D3);
+    padding: 12.2px 18.2px;
+}
+
+.gallery-type label {
+    margin: 0;
+    color: #032B44;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px 5px;
+    transition: .4s ease;
+    font-family: $body-font;
+    font-size: 1.25em;
+}
+
+.gallery-type label:hover {
+    background: linear-gradient(to bottom, #F9D58B, #EAD5B1);
+}
+
+.gallery-type input[type="radio"] {
+    display: none;
+}
+
+.gallery-type input[type="radio"]:checked + label {
+    background: linear-gradient(to bottom, #032B44, #EAD5B1);
+    color: white;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Funciona bien en pantallas más grandes
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #D7B269;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05);
+    border-color: #E9BE76;
+  }
+  
+  // Media query para pantallas más pequeñas (por ejemplo, móviles)
+  @media (max-width: 768px) {
+    .gallery-container {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); // Ajustamos para pantallas pequeñas
+      gap: 15px; // Reducimos el espacio entre los elementos
+      padding: 10px;
+    }
+  }
+  
+  // Media query para pantallas muy pequeñas (como smartphones)
+  @media (max-width: 480px) {
+    .gallery-container {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); // Menor tamaño para móviles pequeños
+      gap: 10px;
+      padding: 5px;
+    }
+  
+    .gallery-item img {
+      border-width: 1px; // Borde más fino en pantallas pequeñas
+    }
+  }
+  

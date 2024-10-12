@@ -1,1 +1,30 @@
-<p>gallery works!</p>
+<section class="gallery">
+
+    <div class="container">
+        <div class="header">
+        <h1>Galería</h1>
+        <nav class="gallery-type">
+            <input type="radio" id="gallery-all" name="gallery-type" value="all" checked (change)="onCategoryChange('all')">
+            <label class="radio" for="gallery-all">Todos</label>
+            
+            <input type="radio" id="gallery-landscapes" name="gallery-type" value="landscapes" (change)="onCategoryChange('landscapes')">
+            <label class="radio" for="gallery-landscapes">Paisajes</label>
+            
+            <input type="radio" id="gallery-portraits" name="gallery-type" value="portraits" (change)="onCategoryChange('portraits')">
+            <label class="radio" for="gallery-portraits">Retratos</label>
+            
+            <input type="radio" id="gallery-still-life" name="gallery-type" value="still-life" (change)="onCategoryChange('still-life')">
+            <label class="radio" for="gallery-still-life">Hansel</label>
+        </nav>
+        
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-item" *ngFor="let image of filteredImages" (click)="openModal(image)">
+                  <img [src]="image.src" [alt]="image.alt">
+                </div>
+              </div>
+
+</div>
+    </section>
+    <app-shared-modal [content]="selectedContent" [isOpen]="isModalOpen" (close)="closeModal()"></app-shared-modal>

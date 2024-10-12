@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IHomeCard } from '../../core/interfaces/home-card.interface';
 import { NgFor } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,26 +11,33 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  constructor(
+    private readonly router: Router
+  ){}
 
   cards :IHomeCard[] = [
     {
       button: "BLOG",
       alt: "blog",
       src: "../../../assets/images/blog.jpg",
-      link: ""
+      link: "blog"
     },
     {
       button: "GALLERY",
       alt: "gallery",
       src: "../../../assets/images/gallery.jpg",
-      link: ""
+      link: "gallery"
     },
     {
       button: "INTRODUCCION",
       alt: "introduccion",
       src: "../../../assets/images/introduction.jpg",
-      link: ""
+      link: "intro"
     }
   ]
 
+
+  goToLink(link: string):void {
+    this.router.navigate([link]);
+  }
 }

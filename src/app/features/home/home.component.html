@@ -20,8 +20,8 @@
             <button class="idk-btn">Nose por ahora</button>
             <div class="cards-container">
                 <div class="card" *ngFor="let card of cards">
-                    <button routerLink="{{card.link}}">{{card.button}}</button>
-                    <div class="card-image" routerLink="{{card.link}}">
+                    <button (click)="goToLink(card.link)">{{card.button}}</button>
+                    <div class="card-image" (click)="goToLink(card.link)">
                         <img src="{{card.src}}" alt="{{card.alt}}">
                     </div>
                 </div>
