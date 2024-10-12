@@ -168,7 +168,11 @@
     .blog {
         background: linear-gradient(to top, #032b44d7 97%, transparent 99%);
       flex-direction: column;
+    }
+    
+    .container {
       padding: 0 20px;
+      flex-direction: column;
     }
   
     .left-container,
