@@ -20,7 +20,7 @@ ul li {
 }
 
 ul li a {
-    color: $navbar-color;
+    color: #F9D58B;
     font-weight: 700;
     font-size: 25px;
     cursor: pointer;
@@ -38,7 +38,7 @@ ul li a::after {
     left: 50%;
     width: 0;
     height: 4px;
-    background-color: $title-color;
+    background-color: #F9D58B;
     transition: width 0.4s ease, left 0.4s ease;
     left: 50%;
     transform: translateX(-5%);
@@ -52,7 +52,7 @@ ul li a.active::after {
 
 ul li a:hover,
 ul li a.active {
-    color: $title-color;
+    color: #F9D58B;
 }
 
 
