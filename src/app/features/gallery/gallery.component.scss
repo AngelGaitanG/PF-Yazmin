@@ -135,6 +135,11 @@ nav {
       gap: 10px;
       padding: 5px;
     }
+
+    .gallery-item {
+      width: 180px; 
+      height: 244.5px; 
+    }
   
     .gallery-item img {
       border-width: 1px; // Borde más fino en pantallas pequeñas
