@@ -85,23 +85,38 @@ nav {
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Funciona bien en pantallas más grandes
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
   }
+
+  .gallery-item {
+    background-image: url(../../../assets/marcos/marco1.png);
+    width: 200px; 
+    height: 264.5px; 
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
   
   .gallery-item img {
-    width: 100%;
-    height: auto;
-    border: 2px solid #D7B269;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+    width: 155px;
+    height: 220px;
+    object-fit: cover;
+    
     cursor: pointer;
   }
   
-  .gallery-item img:hover {
+  .gallery-item:hover {
     transform: scale(1.05);
-    border-color: #E9BE76;
+    box-shadow: 0 0 10px #E9BE76;
   }
   
   // Media query para pantallas más pequeñas (por ejemplo, móviles)
