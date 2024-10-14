@@ -28,20 +28,20 @@ export class GalleryComponent {
   ];
   
     selectedContent: any = null;
-    isModalOpen: boolean = false;
-
-  selectedCategory: string = 'all';
-  get filteredImages() {
-    if (this.selectedCategory === 'all') {
-      return this.images;
-    } else {
-      return this.images.filter(image => image.category === this.selectedCategory);
+    
+    selectedCategory: string = 'all';
+    get filteredImages() {
+      if (this.selectedCategory === 'all') {
+        return this.images;
+      } else {
+        return this.images.filter(image => image.category === this.selectedCategory);
+      }
     }
-  }
-  onCategoryChange(category: string) {
-    this.selectedCategory = category;
-  }
-
+    onCategoryChange(category: string) {
+      this.selectedCategory = category;
+    }
+    
+    isModalOpen: boolean = false;
   openModal(content: any) {
     this.selectedContent = content;
     console.log(this.selectedContent);
