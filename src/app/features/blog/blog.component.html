@@ -8,19 +8,19 @@
             <div *ngFor="let post of destacatedPosts" class="destacated-post">
                 <div class="post" (click)="openModal(post)">
                     <h3 class="post-title">{{post.title}}</h3>
-                    <p class="post-text">{{post.text}}</p>
+                    <p class="post-text">{{post.resume}}</p>
                 </div>
             </div>
         </div>
         <h3 class="subtitle-blog">BLOG POSTS</h3>
         <div class="blog-posts" >
             <div class="blog-card" *ngFor="let post of blogPosts">
-                <p class="card-text" (click)="openModal(post)">{{post.text}}</p>
+                <p class="card-text" (click)="openModal(post)">{{post.resume}}</p>
             </div>
         </div>
         <h3 class="subtitle-blog">ARTS</h3>
         <div class="blogs-art">
-            <div class="art-card"*ngFor="let post of blogPosts">
+            <div class="art-card"*ngFor="let post of blogArts">
                 <img src="{{post.image}}" alt="{{post.title}}" class="art-card-image" (click)="openModal(post)">
             </div>
         </div>
@@ -32,7 +32,7 @@
                 <img src="{{content.src}}" alt="{{content.alt}}" class="vertical-image" (click)="openModal(content)">
             </ng-template>
             <ng-template #p>
-                <p class="vertical-text" (click)="openModal(content)">{{content.text}}</p>
+                <p class="vertical-text" (click)="openModal(content)">{{content.resume}}</p>
             </ng-template>
         </div>
     </div>

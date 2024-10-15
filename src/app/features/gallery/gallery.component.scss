@@ -119,19 +119,17 @@ nav {
     box-shadow: 0 0 10px #E9BE76;
   }
   
-  // Media query para pantallas más pequeñas (por ejemplo, móviles)
   @media (max-width: 768px) {
     .gallery-container {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); // Ajustamos para pantallas pequeñas
-      gap: 15px; // Reducimos el espacio entre los elementos
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+      gap: 15px; 
       padding: 10px;
     }
   }
   
-  // Media query para pantallas muy pequeñas (como smartphones)
   @media (max-width: 480px) {
     .gallery-container {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); // Menor tamaño para móviles pequeños
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
       gap: 10px;
       padding: 5px;
     }
@@ -144,7 +142,7 @@ nav {
     .gallery-item img {
       width: 137px;
     height: 195px;
-      border-width: 1px; // Borde más fino en pantallas pequeñas
+      border-width: 1px; 
     }
   }
   

@@ -18,12 +18,18 @@ interface IImage {
 })
 export class GalleryComponent {
   images: IImage[] = [
+    { src: '../../assets/paints/paint3.jpg', category: 'landscapes', title: 'Paisaje de ensue o', alt: 'Paisaje 3' },
+    {
+      src: '../../assets/paints/paint4.jpg',
+      category: 'landscapes',
+      title: 'Paisaje de ensue o',
+      alt: 'Paisaje 2',
+    },
     { src: '../../assets/paints/paint1.jpg', category: 'landscapes', title: 'Paisaje de ensue o', alt: 'Paisaje 1' },
     { src: '../../assets/paints/paint2.jpg', category: 'landscapes', title: 'Paisaje de ensue o', alt: 'Paisaje 2' },
-    { src: '../../assets/paints/paint3.jpg', category: 'landscapes', title: 'Paisaje de ensue o', alt: 'Paisaje 3' },
+    { src: '../../assets/paints/la_escapatoria.jpg', category: 'landscapes', title: 'La Escapatoria', alt: 'Paisaje 6' },
     { src: '../../assets/paints/paint0.jpg', category: 'landscapes', title: 'Paisaje de ensue o', alt: 'Paisaje 4' },
-    { src: '../../assets/paints/la_escapatoria.jpg', category: 'landscapes', title: 'Paisaje de ensue o', alt: 'Paisaje 6' },
-    { src: '../../assets/paints/una_mascara_para_renacer.jpg', category: 'landscapes', title: 'Paisaje de ensue o', alt: 'Paisaje 7' },
+    { src: '../../assets/paints/una_mascara_para_renacer.jpg', category: 'landscapes', title: 'Una mascara para renacer', alt: 'Paisaje 7' },
     
   ];
   

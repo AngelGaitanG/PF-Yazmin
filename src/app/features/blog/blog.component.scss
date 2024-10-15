@@ -59,6 +59,8 @@
                 font-size: 22px;  /* Un tamaño más estándar */
                 color: $navbar-color;
                 margin: 0 auto;
+                transition: .3s ease;
+
             }
 
             p {
@@ -66,7 +68,17 @@
                 font-size: 18px;
                 color: $navbar-color;
                 margin: 0 auto;
-            }
+                transition: .3s ease;
+              }
+
+            
+        }
+
+        .post:hover h3, .post:hover p {
+            cursor: pointer;
+            color: #F9D58B;
+            text-shadow: 0 0 10px rgba(255, 223, 80, 0.5);
+        
         }
     }
 
@@ -102,6 +114,13 @@
                 font-size: 18px;
                 font-weight: normal;  /* Cambiado para mejor legibilidad */
                 color: $navbar-color;
+                transition: .3s ease;
+            }
+
+            p:hover {
+                cursor: pointer;
+                color: #F9D58B;
+                text-shadow: 0 0 10px rgba(255, 223, 80, 0.5);
             }
         }
     }
@@ -153,6 +172,12 @@
         border: 2px solid #F9D58B;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .vertical-image:hover {
+        cursor: pointer;
+        box-shadow: 0 0 20px rgba(255, 223, 80, 0.5);
     }
 
     .vertical-text {
@@ -160,10 +185,21 @@
                 font-size: 18px;
                 font-weight: normal; 
                 color: $navbar-color;
+                transition: .3s ease;
+    }
+
+    .vertical-text:hover {
+        cursor: pointer;
+        color: #F9D58B;
+        text-shadow: 0 0 10px rgba(255, 223, 80, 0.5);
     }
 }
 
-// Versión para tabletas y pantallas medianas (768px)
+app-shared-modal {
+  z-index: 9999999;
+}
+
+
 @media screen and (max-width: 768px) {
     .blog {
         background: linear-gradient(to top, #032b44d7 97%, transparent 99%);
@@ -206,7 +242,7 @@
     }
   }
   
-  // Versión para celulares (480px)
+  
   @media screen and (max-width: 480px) {
     .right-container .title {
       font-size: 48px;
@@ -235,7 +271,6 @@
     }
   }
   
-  // Versión para celulares pequeños (320px)
   @media screen and (max-width: 320px) {
     .blog {
       padding: 0 10px;

@@ -10,9 +10,10 @@ header {
 
 ul {
     list-style: none;
-    padding: 0;
+    padding: 10px;
     display: flex;
     gap: 0 40px;
+    
 }
 
 ul li {
@@ -20,7 +21,7 @@ ul li {
 }
 
 ul li a {
-    color: #F9D58B;
+    color: $navbar-color;
     font-weight: 700;
     font-size: 25px;
     cursor: pointer;
@@ -28,7 +29,7 @@ ul li a {
     padding: 5px 0;
     text-decoration: none;
     transition: color 0.3s ease;
-    text-shadow: 0 0 10px black;
+    text-shadow: 0 0 4px #000000;
 }
 
 ul li a::after {
@@ -52,7 +53,7 @@ ul li a.active::after {
 
 ul li a:hover,
 ul li a.active {
-    color: #F9D58B;
+    color: #fffffe;
 }
 
 

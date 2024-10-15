@@ -6,16 +6,16 @@ import { GalleryComponent } from './features/gallery/gallery.component';
 
 export const routes: Routes = [
     {
-        path: 'home', component: HomeComponent
+        path: 'home', component: HomeComponent, data: { animation: 'home' }
     },
     {
-        path: 'blog', component: BlogComponent
+        path: 'blog', component: BlogComponent, data: { animation: 'blog' }
     },
     {
-        path: 'intro', component: IntroductionComponent
+        path: 'intro', component: IntroductionComponent, data: { animation: 'intro' }
     },
     {
-        path: 'gallery', component: GalleryComponent
+        path: 'gallery', component: GalleryComponent, data: { animation: 'gallery' }
     },
     {
         path: '', redirectTo: 'home', pathMatch: 'full'
