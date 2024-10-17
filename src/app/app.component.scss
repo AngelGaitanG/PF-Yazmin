@@ -11,6 +11,16 @@ main {
   z-index: 1;
 }
 
+
+
 app-header{
   z-index: 1;
+}
+
+@media screen and (max-width: 400px) {
+
+    main {
+        width: 100vw;
+    }
+  
 }
