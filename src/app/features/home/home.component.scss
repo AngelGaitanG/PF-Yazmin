@@ -7,7 +7,7 @@
 }
 
 .welcome {
-    height: calc(100vh - 60px);
+    height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 500px;
     height: 400px;
     img {
         width: 100%;
@@ -42,7 +42,7 @@
     align-items: center;
     position: relative;
     h1 {
-        font-size: 70px;
+        font-size: 80px;
         font-weight: 500;
         color: $title-color;
         // background: linear-gradient(
@@ -54,7 +54,7 @@
         // -webkit-text-fill-color: transparent;
         text-shadow: 0px 0px 10px rgb(0, 24, 92);
         position: relative;
-        bottom: 10px;
+        bottom: 20px;
         font-family: $titles;
         
     }
@@ -206,6 +206,10 @@
 
 
 @media screen and (max-width: 487px) {
+
+    .bottom-container {
+        width: 100vw;
+    }
 
     .bottom {
         height: 1700px;

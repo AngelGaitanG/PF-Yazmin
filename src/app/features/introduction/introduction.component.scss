@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +27,8 @@
     border-radius: 50%;
     border: 4px solid #F9D58B;
     margin: 0 auto 20px;
+    object-fit: cover;
+    background-color: #032B44;
 }
 h1 {
     color: #F9D58B;

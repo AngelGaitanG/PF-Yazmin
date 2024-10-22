@@ -1,0 +1,50 @@
+@import '../../../../styles.scss';
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #032b44d7;
+    padding: 10px;
+    padding-top: 80px;
+    width: calc(100vw - 8px);
+}
+
+.copyright {
+    font-size: 16px;
+    color: #F9D58B;
+    font-family: $emphasis-font;
+
+}
+
+.developed {
+    font-size: 16px;
+    color: #F9D58B;
+    font-family: $emphasis-font;
+}
+
+.developed a{
+    font-size: 16px;
+    color: #F9D58B;
+    font-family: $emphasis-font;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.856);
+    transition: 0.3s ease;
+}
+
+.developed a:hover {
+    color: #F9D58B;
+    
+    border-bottom: 1px solid #F9D58B;
+}
+
+@media (max-width: 468px) {
+
+    footer {
+        width: 100vw;
+        flex-direction: column;
+    }
+}
