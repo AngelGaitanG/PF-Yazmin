@@ -1,0 +1,39 @@
+<div class="cartita">
+    <div class="card-container">
+        <div class="card">
+            <div class="carta-encabezado">
+                <div class="fecha">{{ fecha }}</div>
+                <div class="remitente">
+                    <p>{{ nombreRemitente }}</p>
+                    <p>{{ direccionRemitente }}</p>
+                </div>
+            </div>
+            
+            <div class="carta-cuerpo">
+                <div class="destinatario">
+                    <p>{{ nombreDestinatario }}</p>
+                    <p>{{ direccionDestinatario }}</p>
+                </div>
+                
+                <div class="saludo">
+                    <p>Estimada {{ nombreDestinatario }},</p>
+                </div>
+                
+                <div class="contenido">
+                    <p>{{ contenidoCarta }}</p>
+                </div>
+                
+                <div class="despedida">
+                    <p>Atentamente,</p>
+                    <p>{{ nombreRemitente }}</p>
+                </div>
+            </div>
+            
+            <div class="carta-pie">
+                <div class="firma">
+                    <img src="../../../../assets/marcos/firma.png" alt="Firma">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

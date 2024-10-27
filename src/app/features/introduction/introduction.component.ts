@@ -1,5 +1,6 @@
 import { NgFor, NgIf, NgSwitch } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 enum Section {
   Infancia = 0,
@@ -11,7 +12,7 @@ enum Section {
 @Component({
   selector: 'app-introduction',
   standalone: true,
-  imports: [NgFor, NgIf, NgSwitch],
+  imports: [NgFor, NgIf, NgSwitch, RouterLink],
   templateUrl: './introduction.component.html',
   styleUrl: './introduction.component.scss'
 })
@@ -34,7 +35,6 @@ export class IntroductionComponent implements OnInit {
   actualSection: Section = Section.Infancia;
 
   facts: string[] = [
-    'Nacida bajo una lluvia de estrellas',
     'Sinestesia: pinta lo que escucha',
     'Autora de "La escapatoria"',
     'Adicta al chocolate en dias de lluvia',

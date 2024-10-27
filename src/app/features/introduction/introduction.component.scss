@@ -54,6 +54,7 @@ h1 {
     justify-content: center;
     font-family: $body-font;
     font-size: 1.25em;
+    transition: .4s ease;
 }
 .fact::before {
     content: '★';
@@ -180,4 +181,15 @@ h1 {
     0% { opacity: 0.7; }
     50% { opacity: 0.3; }
     100% { opacity: 0.7; }
+}
+
+.special-gift {
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.special-gift:hover {
+    color: #F9D58B;
+    text-shadow: 0 0 10px #F9D58B;
+    transform: scale(1.05);
 }

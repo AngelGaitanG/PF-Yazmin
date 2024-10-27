@@ -3,6 +3,7 @@ import { HomeComponent } from './features/home/home.component';
 import { BlogComponent } from './features/blog/blog.component';
 import { IntroductionComponent } from './features/introduction/introduction.component';
 import { GalleryComponent } from './features/gallery/gallery.component';
+import { CartitaComponent } from './shared/components/cartita/cartita.component';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,9 @@ export const routes: Routes = [
     },
     {
         path: 'gallery', component: GalleryComponent, data: { animation: 'gallery' }
+    },
+    {
+        path: 'cartita', component: CartitaComponent, data: { animation: 'cartita' }
     },
     {
         path: '', redirectTo: 'home', pathMatch: 'full'
